@@ -19,7 +19,6 @@ const loginUser = async (req, res) => {
       return res.json({ success: false, message: "Incorrect password" });
     }
 
-    // Token oluşturma
     const token = jwt.sign({ id: user._id }, process.env.JWT_SECRET, {
       expiresIn: "1h",
     });
