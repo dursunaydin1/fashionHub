@@ -12,5 +12,3 @@ const Navbar = () => {
 };
 
 export default Navbar;
-
-//7:38
