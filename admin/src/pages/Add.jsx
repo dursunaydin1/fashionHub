@@ -196,7 +196,7 @@ const Add = ({ token }) => {
             <p
               className={`${
                 sizes.includes("S") ? "bg-pink-100" : "bg-slate-200"
-              } px-3 py-1 cursor-pointer`} // Burada fazla bir '}' kaldı, bu hataya yol açabilir.
+              } px-3 py-1 cursor-pointer`}
             >
               S
             </p>
@@ -214,7 +214,7 @@ const Add = ({ token }) => {
             <p
               className={`${
                 sizes.includes("M") ? "bg-pink-100" : "bg-slate-200"
-              } px-3 py-1 cursor-pointer`} // Aynı şekilde burada da fazla '}' bulunuyor.
+              } px-3 py-1 cursor-pointer`}
             >
               M
             </p>
@@ -232,7 +232,7 @@ const Add = ({ token }) => {
             <p
               className={`${
                 sizes.includes("L") ? "bg-pink-100" : "bg-slate-200"
-              } px-3 py-1 cursor-pointer`} // Aynı şekilde burada da fazla '}' bulunuyor.
+              } px-3 py-1 cursor-pointer`}
             >
               L
             </p>
@@ -250,7 +250,7 @@ const Add = ({ token }) => {
             <p
               className={`${
                 sizes.includes("XL") ? "bg-pink-100" : "bg-slate-200"
-              } px-3 py-1 cursor-pointer`} // Aynı şekilde burada da fazla '}' bulunuyor.
+              } px-3 py-1 cursor-pointer`}
             >
               XL
             </p>
@@ -268,7 +268,7 @@ const Add = ({ token }) => {
             <p
               className={`${
                 sizes.includes("XXL") ? "bg-pink-100" : "bg-slate-200"
-              } px-3 py-1 cursor-pointer`} // Aynı şekilde burada da fazla '}' bulunuyor.
+              } px-3 py-1 cursor-pointer`}
             >
               XXL
             </p>
