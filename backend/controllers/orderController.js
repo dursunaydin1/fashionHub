@@ -54,7 +54,15 @@ const userOrders = async (req, res) => {
 };
 
 // Update order status for Admin Panel
-const updateOrderStatus = async (req, res) => {};
+const updateOrderStatus = async (req, res) => {
+  try {
+    const { orderId, status } = req.body;
+    await orderModel.findByIdAndUpdate(orderId, { status });
+    res.json({ success: true, message: "Order Status Updated" });
+  } catch (error) {
+    res.json({ success: false, message: error.message });
+  }
+};
 
 export {
   placeOrderStripe,
