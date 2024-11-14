@@ -37,6 +37,42 @@ const PlaceOrder = () => {
     setFormData((prev) => ({ ...prev, [name]: value }));
   };
 
+  const initPay = (order) => {
+    const options = {
+      key: import.meta.env.VITE_RAZORPAY_KEY_ID,
+      amount: order.amount * 100,
+      currency: order.currency,
+      name: "Order Payment",
+      order_id: order.id,
+      handler: async (response) => {
+        console.log(response);
+        try {
+          const { data } = await axios.post(
+            backendUrl + "/api/order/verifyRazorpay",
+            response,
+            { headers: { token } }
+          );
+          if (data.success) {
+            navigate("/orders");
+            setCartItems({});
+          } else {
+            toast.error("Payment verification failed.");
+          }
+        } catch (error) {
+          toast.error(error.message);
+        }
+      },
+      modal: {
+        ondismiss: () => {
+          toast.info("Payment was cancelled.");
+        },
+      },
+    };
+
+    const rzp = new window.Razorpay(options);
+    rzp.open();
+  };
+
   const onSubmitHandler = async (e) => {
     e.preventDefault();
     try {
@@ -80,6 +116,35 @@ const PlaceOrder = () => {
           }
           break;
         }
+
+        case "stripe": {
+          const responseStripe = await axios.post(
+            backendUrl + "/api/order/stripe",
+            orderData,
+            {
+              headers: { token },
+            }
+          );
+          if (responseStripe.data.success) {
+            window.location.href = responseStripe.data.url;
+          } else {
+            toast.error(responseStripe.data.message);
+          }
+          break;
+        }
+
+        case "razorpay": {
+          const responseRazorpay = await axios.post(
+            backendUrl + "/api/order/razorpay",
+            orderData,
+            { headers: { token } }
+          );
+          if (responseRazorpay.data.success) {
+            initPay(responseRazorpay.data.order);
+          }
+          break;
+        }
+
         default:
           break;
       }
