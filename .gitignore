@@ -1,3 +1,4 @@
-node modules
-
-*.env
+.env
+admin/.env
+frontend/.env
+backend/.env
