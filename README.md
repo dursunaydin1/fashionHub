@@ -1,10 +1,12 @@
-# **Project Name**
+# **fashionHub**
 
 ## **Proje Açıklaması**
 
-Bu proje, kullanıcıların farklı rollerle etkileşimde bulunabildiği, kullanıcı arayüzü (frontend), yönetim paneli (admin), ve API servisi (backend) olmak üzere üç ana bileşene sahip bir web uygulamasıdır.
+Bu proje, kullanıcıların farklı rollerle etkileşimde bulunabildiği, kullanıcı arayüzü (frontend), yönetim paneli (admin), ve API servisi (backend) olmak üzere üç ana bileşene sahip bir web eccommerce uygulamasıdır.
 
----
+## **Önizleme**
+
+<img src="./images.gif" alt="" >
 
 ## **Proje Yapısı**
 
@@ -13,8 +15,6 @@ Proje üç ana klasöre ayrılmıştır:
 - **admin/**: Yönetici panelini içerir.
 - **frontend/**: Kullanıcı arayüzünü içerir.
 - **backend/**: API servisi ve veritabanı işlemlerini içerir.
-
----
 
 ## **Özellikler**
 
@@ -35,8 +35,6 @@ Proje üç ana klasöre ayrılmıştır:
 - RESTful API
 - Veritabanı yönetimi
 - Ödeme sistemleri entegrasyonu
-
----
 
 ## **Kurulum**
 
@@ -80,8 +78,6 @@ Backend:
 - Veritabanı bilgileri
 - Ödeme entegrasyonu anahtarları
 
----
-
 ## **Çalıştırma**
 
 Admin:  
@@ -102,8 +98,6 @@ Backend:
 API servisi şu adreste çalışır:  
 http://localhost:5000
 
----
-
 ## **Komutlar**
 
 ### Test Çalıştırma
@@ -116,23 +110,17 @@ Admin, frontend ve backend için testleri çalıştırabilirsiniz:
 Admin ve frontend için:  
 `npm run build`
 
----
-
 ## **Teknolojiler**
 
 - Admin & Frontend: React, Redux, Tailwind CSS
 - Backend: Node.js, Express.js, MongoDB
 - Ödeme Entegrasyonu: Stripe, Razorpay
 
----
-
 ## **Proje Geliştiricileri**
 
 - Frontend Developer: [Adınız]
 - Backend Developer: [Adınız]
 - Admin Panel Developer: [Adınız]
-
----
 
 ## **Katkıda Bulunma**
 
@@ -144,7 +132,3 @@ Admin ve frontend için:
 4. Branch'i push edin:  
    `git push origin feature/ozellik-adi`
 5. Bir Pull Request oluşturun.
-
-## **Önizleme**
-
-<img src="./images.gif" alt="" >
